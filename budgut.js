@@ -3,7 +3,9 @@ let playerArray =[];
 function myFunction() {
     window.open("blog.html");
   }
-
+function myFunctions() {
+    window.open("index.html");
+  }
 function addToCart(element){
     const name = element.parentNode.parentNode.parentNode.children[1].children[0].innerText ;
     playerArray.push(name);    
@@ -144,6 +146,13 @@ const setBg = () => {
   const Triangle =document.getElementById('Triangle');
   Triangle.addEventListener("click", setBg);
   setBg();
+const setBgs = () => {
+    const randomColors = Math.floor(Math.random()*16777215).toString(16);
+    const Triangle =document.getElementById('colors').style.backgroundColor = "#" + randomColors;
+  }
+  const Rhombus =document.getElementById('Rhombus');
+  Rhombus.addEventListener("click", setBgs);
+  setBgs();
 
 
 function display(playerArray) {
